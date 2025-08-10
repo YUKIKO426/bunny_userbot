@@ -32,7 +32,7 @@ async def collect_afk_messages(bot: Client, message: Message):
         if GetChatID(message) not in CHAT_TYPE:
             text = (
                 f"`Beep boop. This is an automated message.\n"
-                f"I am not available right now.\n"
+                f"baad m ana bsdk.\n"
                 f"Last seen: {last_seen}\n"
                 f"Reason: ```{AFK_REASON.upper()}```\n"
                 f"See you after I'm done doing whatever I'm doing.`"
