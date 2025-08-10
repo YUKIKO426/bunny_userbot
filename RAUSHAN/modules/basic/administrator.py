@@ -144,7 +144,7 @@ async def member_unban(client: Client, message: Message):
     rd = await message.edit_text("`Processing...`")
     bot = (await client.get_chat_member(message.chat.id, client.me.id)).privileges
     if not bot.can_restrict_members:
-        return await rd.edit("I don't have enough permissions")
+        return await rd.edit("poori permission de bhen ke lund")
     if reply and reply.sender_chat and reply.sender_chat != message.chat.id:
         return await rd.edit("You cannot unban a channel")
 
@@ -169,7 +169,7 @@ async def pin_message(client: Client, message):
     rd = await message.edit_text("`Processing...`")
     bot = (await client.get_chat_member(message.chat.id, client.me.id)).privileges
     if not bot.can_pin_messages:
-        return await rd.edit("I don't have enough permissions")
+        return await rd.edit("poori permission de bhen ke lund")
     r = message.reply_to_message
     if message.command[0][0] == "u":
         await r.unpin()
@@ -190,7 +190,7 @@ async def mute(client: Client, message: Message):
     rd = await message.edit_text("`Processing...`")
     bot = (await client.get_chat_member(message.chat.id, client.me.id)).privileges
     if not bot.can_restrict_members:
-        return await rd.edit("I don't have enough permissions")
+        return await rd.edit("poori permission de bhen ke lund")
     if not user_id:
         return await rd.edit("I can't find that user.")
     if user_id == client.me.id:
@@ -217,7 +217,7 @@ async def unmute(client: Client, message: Message):
     rd = await message.edit_text("`Processing...`")
     bot = (await client.get_chat_member(message.chat.id, client.me.id)).privileges
     if not bot.can_restrict_members:
-        return await rd.edit("I don't have enough permissions")
+        return await rd.edit("poori permission de bhen ke lund")
     if not user_id:
         return await rd.edit("I can't find that user.")
     await message.chat.restrict_member(user_id, permissions=unmute_permissions)
@@ -231,7 +231,7 @@ async def kick_user(client: Client, message: Message):
     rd = await message.edit_text("`Processing...`")
     bot = (await client.get_chat_member(message.chat.id, client.me.id)).privileges
     if not bot.can_restrict_members:
-        return await rd.edit("I don't have enough permissions")
+        return await rd.edit("poori permission de bhen ke lund")
     if not user_id:
         return await rd.edit("I can't find that user.")
     if user_id == client.me.id:
@@ -268,7 +268,7 @@ async def promotte(client: Client, message: Message):
         return await rd.edit("I can't find that user.")
     bot = (await client.get_chat_member(message.chat.id, client.me.id)).privileges
     if not bot.can_promote_members:
-        return await rd.edit("I don't have enough permissions")
+        return await rd.edit("poori permission de bhen ke lund")
     if message.command[0][0] == "f":
         await message.chat.promote_member(
             user_id,
