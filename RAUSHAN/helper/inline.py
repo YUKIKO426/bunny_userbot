@@ -84,7 +84,7 @@ def inline_wrapper(func):
                 results=[
                     (
                         InlineQueryResultArticle(
-                            title="Sorry, Friend You Can't Use Me!",
+                            title="bhgg jaa yaha se madarchod!",
                             input_message_content=InputTextMessageContent(
                                 "You cannot access this Bot"
                             ),
